@@ -1,0 +1,59 @@
+/* Style the form to a fixed width so the form looks the same
+   even if the browser window is resized */
+form {
+	width: 50em;
+}
+
+/* Style text input rows using Flexbox */
+.textinput {
+	display: flex;              /* place label and input in one row */
+	align-items: center;        /* vertically align label and input */
+	margin: 10px;               /* spacing between rows */
+}
+
+/* Style labels for text input fields */
+.textinput label {
+	text-align: right;          /* align label text to the right */
+	width: 10em;                /* fixed label width */
+	margin-right: 1em;          /* space between label and input */
+}
+
+/* Style text input fields */
+.textinput input {
+	width: 50%;                 /* consistent input width */
+}
+
+/* Style radio button input using Flexbox */
+.radioinput {
+	display: flex;              /* place Gender, radio buttons and labels in one row */
+	align-items: center;        /* vertically align items */
+	margin: 10px;               /* spacing around the radio input row */
+}
+
+/* Style the Gender label */
+.radiolabel {
+	text-align: right;          /* align text to the right */
+	width: 10em;                /* match text input label width */
+	margin-right: 1em;          /* space between label and radio buttons */
+}
+
+/* Style radio buttons */
+.radioinput input {
+	width: 2em;                 /* small width for radio buttons */
+}
+
+/* Style radio labels */
+.radioinput label {
+	text-align: left;           /* align radio label text to the left */
+	margin-right: 1em;          /* space between options */
+}
+
+/* Style button input */
+.buttoninput {
+	text-align: right;          /* align submit button to the right */
+	margin: 10px;
+}
+
+.buttoninput input {
+	width: auto;                /* keep button width natural */
+}
