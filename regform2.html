@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />	
-	<meta name="description" content="Web development" />
-	<meta name="keywords" content="Registration Form" />
-	<meta name="author" content="put your name here" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web development">
+    <meta name="keywords" content="Registration Form">
+    <meta name="author" content="Tan Yaw Pin">
+    <title>Web Development Registration Form</title>
 
-	<!-- (1) -->
-	<!-- (2) -->
-	<!-- (3) -->
-	<!-- (4) -->
-
-	<title>Web Development Form Validation Demo</title>
+    <link href="regform2_desktop.css" rel="stylesheet" type="text/css"
+        media="screen and (min-device-width: 481px)">
+    <link href="modal.css" rel="stylesheet" type="text/css">
+    <script src="jquery.min.js"></script>
+    <script src="validation.js"></script>
 </head>
+
 <body>
-	<form id="regform" method="post"
-		action="http://mercury.swin.edu.au/it000000/formtest.php">
+    <form id="regform" method="post"
+        action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
 
-		<!-- (5) -->
-		<fieldset>
-			<legend>Account Information</legend>
+        <!-- Account information -->
+        <div>
+            <a class="collapse" href="#" role="button" aria-expanded="true"
+                aria-controls="accountInfo" aria-label="Collapse account information">[-]</a>
+            <span>Section A</span>
+        </div>
 
-			<div class="textinput">
-				<label for="sid">User ID</label>
-				<input id="sid" type="text" name="id" />
-			</div>
+        <fieldset id="accountInfo">
+            <legend>Account Information</legend>
 
-			<div class="textinput">
-				<label for="pwd1">Password</label>
-				<input id="pwd1" type="password" name="pwd1" />
-			</div>
+            <div class="textinput">
+                <label for="sid">User ID</label>
+                <input id="sid" type="text" name="sid">
+            </div>
 
-			<div class="textinput">
-				<label for="pwd2">Retype Password</label>
-				<input id="pwd2" type="password" name="pwd2" />
-			</div>
-		</fieldset>
+            <div class="textinput">
+                <label for="pwd1">Password</label>
+                <input id="pwd1" type="password" name="pwd1">
+            </div>
 
-		<!-- (6) -->
-		<fieldset>
-			<legend>User Information</legend>
+            <div class="textinput">
+                <label for="pwd2">Retype Password</label>
+                <input id="pwd2" type="password" name="pwd2">
+            </div>
+        </fieldset>
 
-			<div class="textinput">
-				<label for="uname">Name</label>
-				<input id="uname" type="text" name="uname" />
-			</div>
+        <!-- User information -->
+        <div>
+            <a class="collapse" href="#" role="button" aria-expanded="true"
+                aria-controls="userInfo" aria-label="Collapse user information">[-]</a>
+            <span>Section B</span>
+        </div>
 
-			<div class="radioinput">
-				<span class="radiolabel">Gender</span>
+        <fieldset id="userInfo">
+            <legend>User Information</legend>
 
-				<input id="genm" type="radio" name="gender" value="M" />
-				<label for="genm">Male</label>
+            <div class="textinput">
+                <label for="uname">Name</label>
+                <input id="uname" type="text" name="uname">
+            </div>
 
-				<input id="genf" type="radio" name="gender" value="F" />
-				<label for="genf">Female</label>
-			</div>
-		</fieldset>
+            <div class="radioinput" role="group" aria-labelledby="genderLabel">
+                <span id="genderLabel" class="radiolabel">Gender</span>
+                <input id="genm" type="radio" name="gender" value="M">
+                <label for="genm">Male</label>
+                <input id="genf" type="radio" name="gender" value="F">
+                <label for="genf">Female</label>
+            </div>
+        </fieldset>
 
-		<div class="buttoninput">
-			<input type="submit" value="Test Register" />
-		</div>
-	</form>
+        <div class="buttoninput">
+            <input type="submit" value="Test Registration Form">
+        </div>
+    </form>
 </body>
 </html>
